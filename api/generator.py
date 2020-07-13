@@ -20,8 +20,10 @@ def create_directory(path):
         os.mkdir(path)
     except OSError:
         print("Creation of the directory %s failed" % path)
+        return False
     else:
         print("Successfully created the directory %s " % path)
+        return True
 
 
 def get_card(alien):
@@ -58,11 +60,58 @@ def save_data(alien, data):
     data.to_json(get_path(alien) + '/' + alien + '.json')
 
 
+def create_html(alien):
+    f = open(get_path(alien + '/index.html'), 'w')
+
+    message = """<html>
+    <head><title>{title}</title></head>
+    <body>
+    <h1>{title}</h1>
+    <br />
+    <img src="{img}" />
+    <br />
+    <a href={img}>Image</a>
+    <br />
+    <a href={json}>json</a>
+    </body>
+    </html>""".format(title=alien, img=alien + '.jpg',
+                      json=alien + '.json')
+
+    f.write(message)
+    f.close()
+
+
+def create_alien_list(aliens):
+
+    f = open(get_path('/index.html'), 'w')
+
+    aliens_html = ""
+
+    for alien in aliens:
+        aliens_html += "<li><a href='/api/" + alien + \
+            "/index.html'>" + alien + "</a></li>"
+
+    message = """<html>
+    <head><title>Aliens</title></head>
+    <body>
+    <h1>All aliens</h1>
+    <br />
+    <ul>{aliens}</ul>
+    </body>
+    </html>""".format(aliens=aliens_html)
+
+    f.write(message)
+    f.close()
+
+
 aliens = pd.read_json('F:/Development/cosmodex/api/aliens.json')
-print(aliens.head())
+alien_names = []
 for index, row in aliens.iterrows():
     alien = regex.sub('', row['name'])
     print(alien)
-    create_directory('api/' + alien)
-    get_card(row['name'])
-    save_data(alien, row)
+    if(create_directory('api/' + alien)):
+        get_card(row['name'])
+        save_data(alien, row)
+        create_html(alien)
+    alien_names.append(alien)
+create_alien_list(alien_names)
