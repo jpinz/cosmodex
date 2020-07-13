@@ -88,8 +88,7 @@ def create_alien_list(aliens):
     aliens_html = ""
 
     for alien in aliens:
-        aliens_html += "<li><a href='/api/" + alien + \
-            "/index.html'>" + alien + "</a></li>"
+        aliens_html += "<li><a href='./" + alien + "/index.html'>" + alien + "</a></li>"
 
     message = """<html>
     <head><title>Aliens</title></head>
