@@ -68,7 +68,7 @@ def create_html(alien):
     <body>
     <h1>{title}</h1>
     <br />
-    <img src="{img}" />
+    <img src="{img} width="300" height="450"" />
     <br />
     <a href={img}>Image</a>
     <br />

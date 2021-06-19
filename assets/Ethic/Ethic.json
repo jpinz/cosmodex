@@ -1,0 +1,26 @@
+{
+  "name": "Ethic",
+  "expansion": "Cosmic Incursion",
+  "color": "Green",
+  "short_desc": "Gets Compensation For Attack",
+  "game_setup": null,
+  "description": "You have the power of Guilt. As a main player, after you lose an encounter in which both main players revealed attack cards, use this power to collect compensation from your opponent as though you had played a negotiate card instead.\nWhenever you gain compensation, you may draw some or all of it from the deck instead of your opponent.",
+  "player": "Main Player Only",
+  "mandatory": true,
+  "phases": ["Resolution"],
+  "lore": "Subscribing to a moral code of the utmost purity, the Ethics set a universal standard of conduct. Those who would harm the Ethics find themselves curiously repentant. Knowing that they are possessed of the One True Way, the race of Ethics now seek to convert Outsiders through moral persuasion.",
+  "wild": {
+    "description": "When you draw any new card(s) from the deck, use this flare. For the rest of the encounter, each time you draw cards, you may feel guilty and give away some or all of them to other players. You may not, however, give away more than three cards per encounter in this way.",
+    "player": "As Any Player",
+    "phase": "Any Phase"
+  },
+  "super_flare": {
+    "description": "When you collect compensation, name a number from zero to eight and take that many cards as compensation.",
+    "player": "Main Player Only",
+    "phase": "Resolution"
+  },
+  "retooled_gameplay": null,
+  "edits": null,
+  "tips": null,
+  "classic_flare": null
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Oligarch",
+  "expansion": "Cosmic Eons",
+  "color": "Red",
+  "short_desc": "Gets Richer As Others Get Poorer",
+  "game_setup": "Take your 5 privileges as your essence card cache. You automatically start the game as the first player.",
+  "description": "You have the power of Greed. Every time you draw a new hand of cards, including at the beginning of the game, draw one additional card.\nYou accumulate privileges up to the highest number of foreign colonies that has been reached by any player. Use this power whenever any one player has more foreign colonies than the number of your faceup privilege cards. Look through your essence card cache, choose one privilege, and play it faceup next to this sheet, If you are zapped, the privilege you attempted to play is removed from the game.",
+  "player": "As Any Player",
+  "mandatory": true,
+  "phases": [
+    "Start Turn",
+    "Regroup",
+    "Destiny",
+    "Launch",
+    "Alliance",
+    "Planning",
+    "Reveal",
+    "Resolution"
+  ],
+  "lore": "Overheard at the Oligarch's Elite Club Squash'em: \"It's not enough to know that I'm controlling the Universe from my holodecks, it's that I also want to know that my 'friends' see their lives as immeasurably and permanently less successful than mine.\"",
+  "wild": {
+    "description": "At the start of your turn, if you do not have more cards in hand than all other players, you may draw from the deck until you do (before returning this flare to your hand).",
+    "player": "Offense Only",
+    "phase": "Start Turn"
+  },
+  "super_flare": {
+    "description": "When another player should draw a new hand, you may deal the cards for that hand to yourself, choose one card from among them to keep, and give the rest to that player.",
+    "player": "As Any Player",
+    "phase": "Any Phase"
+  },
+  "retooled_gameplay": null,
+  "edits": null,
+  "tips": null,
+  "classic_flare": null
+}
