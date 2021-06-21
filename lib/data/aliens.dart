@@ -1,5 +1,6 @@
 import 'dart:convert' as json;
 
+import 'package:cosmodex/models/alert_level.dart';
 import 'package:flutter/material.dart';
 
 import '../configs/AppColors.dart';
@@ -30,13 +31,13 @@ Future<Alien> loadAlien(String path) async {
 }
 
 // A function to get Color for the alien
-Color getAlienColor(String color) {
-  switch (color.toLowerCase()) {
-    case 'red':
+Color getAlienColor(AlertLevel level) {
+  switch (level) {
+    case AlertLevel.red:
       return AppColors.red;
-    case 'yellow':
+    case AlertLevel.yellow:
       return AppColors.yellow;
-    case 'green':
+    case AlertLevel.green:
       return AppColors.green;
     default:
       return AppColors.green;

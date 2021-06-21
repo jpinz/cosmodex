@@ -85,7 +85,6 @@ class _AliensDexState extends State<AliensDex>
           AlienContainer(
             appBar: true,
             children: <Widget>[
-              SizedBox(height: 34),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 26.0),
                 child: Text(

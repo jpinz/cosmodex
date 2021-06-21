@@ -1,12 +1,7 @@
+import 'package:cosmodex/models/expansion.dart';
 import 'package:flutter/material.dart';
 
 import '../models/alien.dart';
-
-String _formattedExpansionInitials(String expansion) {
-  List<String> initials = <String>[];
-  initials = expansion.split(" ");
-  return "${initials[0][0] + initials[1][0]}";
-}
 
 String capitalizeFirstChar(String text) {
   if (text == null || text.length <= 1) {
@@ -88,7 +83,7 @@ class AlienCard extends StatelessWidget {
         top: 10,
         right: 14,
         child: Text(
-          _formattedExpansionInitials(alien.expansion),
+          ExpansionExtension.getInitials(alien.expansion),
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.bold,
@@ -129,6 +124,10 @@ class AlienCard extends StatelessWidget {
                   children: [
                     _buildCardContent(),
                     ..._buildDecorations(itemHeight),
+                    // Image.asset(
+                    //   alien.image,
+                    //   fit: BoxFit.fitWidth,
+                    // )
                   ],
                 ),
               ),

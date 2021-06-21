@@ -1,6 +1,10 @@
 import 'dart:collection';
 
+import 'package:cosmodex/models/alert_level.dart';
+import 'package:cosmodex/models/expansion.dart';
+import 'package:cosmodex/models/phase.dart';
 import 'package:cosmodex/models/flare.dart';
+import 'package:enum_to_string/enum_to_string.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -29,14 +33,14 @@ class Alien {
 
   Alien.fromJson(dynamic json, this.image)
       : name = json["name"],
-        expansion = json["expansion"],
-        alert_level = json["color"],
+        expansion = ExpansionExtension.convert(json["expansion"]),
+        alert_level = EnumToString.fromString(AlertLevel.values, json["color"]),
         short_desc = json["short_desc"],
         game_setup = json["game_setup"],
         description = json["description"],
         player = json["player"],
         mandatory = json["mandatory"],
-        phases = json["phases"].cast<String>(),
+        phases = PhaseExtension.convertList(json["phases"].cast<String>()),
         lore = json["lore"],
         wild = Flare.fromJson(json["wild"]),
         super_flare = Flare.fromJson(json["super_flare"]),
@@ -52,14 +56,14 @@ class Alien {
 
   final String name;
   final String image;
-  final String expansion;
-  final String alert_level;
+  final Expansion expansion;
+  final AlertLevel alert_level;
   final String short_desc;
   final String game_setup;
   final String description;
   final String player;
   final bool mandatory;
-  final List<String> phases;
+  final List<Phase> phases;
   final String lore;
   final Flare wild;
   final Flare super_flare;
@@ -77,7 +81,7 @@ class AlienModel extends ChangeNotifier {
 
   UnmodifiableListView<Alien> get aliens => UnmodifiableListView(_aliens);
 
-  bool get hasData => _aliens.length > 0;
+  bool get hasData => _aliens.isNotEmpty;
 
   Alien get alien => _aliens[_selectedIndex];
 
