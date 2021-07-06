@@ -1,1 +1,26 @@
-{"name":"Booster","expansion":"Escape Velocity promo","color":"Green","short_desc":"Sheds Cards When Launching","game_setup":null,"description":"You have the power of Escape Velocity. As the offense or an ally, use this power when you send ships into the encounter. If you send one or two ships, discard the same number of cards from your hand (or one if you have only one). If you send three or more ships, draw one card from the deck to add to your hand, then discard one card.","player":"Offense or Ally Only","mandatory":true,"phases":["Launch","Alliance"],"lore":"Incredibly fast-moving Boosters are launched into low orbit upon birth. Dead weight is shed immediately, and only the most useful resources or tantalizing swag gets harnessed for the good of all Boosters. Now, the Boosters have perfected the leap from imagination to reality, leaving their most challenging competitors staggering around in their Cosmic dust.","wild":{"description":"As a main player or ally, after alliances are formed, you may force an ally (other than yourself) to discard a card from his or her hand at random for each ship he or she has in the encounter.","player":"Main Player or Ally Only","phase":"Alliance"},"super_flare":{"description":"As an ally, when you send three or more ships into the encounter, you may draw that number of cards from the deck. Afterwards, you may discard up to the same number.","player":"Ally Only","phase":"Alliance"},"retooled_gameplay":null,"edits":"Edited to fix the launch bug and mandatory flare bug, to address the case where Booster should discard two cards but has only one, for clarity, and for capitalization and wording conventions.","tips":null,"classic_flare":null}
+{
+  "name": "Booster",
+  "expansion": "Escape Velocity promo",
+  "color": "Green",
+  "short_desc": "Sheds Cards When Launching",
+  "game_setup": null,
+  "description": "You have the power of Escape Velocity. As the offense or an ally, use this power when you send ships into the encounter. If you send one or two ships, discard the same number of cards from your hand (or one if you have only one). If you send three or more ships, draw one card from the deck to add to your hand, then discard one card.",
+  "player": "Offense or Ally Only",
+  "mandatory": true,
+  "phases": ["Launch", "Alliance"],
+  "lore": "Incredibly fast-moving Boosters are launched into low orbit upon birth. Dead weight is shed immediately, and only the most useful resources or tantalizing swag gets harnessed for the good of all Boosters. Now, the Boosters have perfected the leap from imagination to reality, leaving their most challenging competitors staggering around in their Cosmic dust.",
+  "wild": {
+    "description": "As a main player or ally, after alliances are formed, you may force an ally (other than yourself) to discard a card from his or her hand at random for each ship he or she has in the encounter.",
+    "player": "Main Player or Ally Only",
+    "phase": "Alliance"
+  },
+  "super_flare": {
+    "description": "As an ally, when you send three or more ships into the encounter, you may draw that number of cards from the deck. Afterwards, you may discard up to the same number.",
+    "player": "Ally Only",
+    "phase": "Alliance"
+  },
+  "retooled_gameplay": null,
+  "edits": "Edited to fix the launch bug and mandatory flare bug, to address the case where Booster should discard two cards but has only one, for clarity, and for capitalization and wording conventions.",
+  "tips": null,
+  "classic_flare": null
+}

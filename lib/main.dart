@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import 'configs/AppColors.dart';
 import 'screens/dex/dex.dart';
+import 'screens/info/info.dart';
 import 'widgets/fade_page_route.dart';
 
 void main() => runApp(
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         return FadeRoute(page: AliensDex());
 
       case '/alien-info':
-      // return FadeRoute(page: AlienInfo());
+        return FadeRoute(page: AlienInfo());
 
       default:
         return null;
